@@ -30,6 +30,7 @@
                 <li><a href="#about" class="menu-link">About</a></li>
                 <li><a href="#services" class="menu-link">Services</a></li>
                 <li><a href="#projects" class="menu-link">Projects</a></li>
+                <li><a href="#video" class="menu-link">Video</a></li>
                 <li><a href="#skills" class="menu-link">Skills</a></li>
                 <li><a href="#contact" class="menu-link">Contact</a></li>
             </ul>
@@ -46,6 +47,45 @@
                 <div class="text-2">Taju Abdulfeta</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
                 <a href="#contact">Hire me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- video call section start -->
+    <section class="video" id="video">
+        <div class="max-width">
+            <h2 class="title">Video call & chat</h2>
+            <div class="video-layout">
+                <div class="video-grid">
+                    <video id="localVideo" autoplay playsinline muted></video>
+                    <video id="remoteVideo" autoplay playsinline></video>
+                </div>
+                <div class="video-sidebar">
+                    <div class="room-controls">
+                        <label for="roomId">Room</label>
+                        <input id="roomId" type="text" value="room1" />
+                        <button id="btnJoin" type="button">Join</button>
+                        <button id="btnLeave" type="button" disabled>Leave</button>
+                    </div>
+                    <div class="media-controls">
+                        <button id="btnMic" type="button" disabled>
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button id="btnCam" type="button" disabled>
+                            <i class="fas fa-video"></i>
+                        </button>
+                        <button id="btnSwap" type="button" disabled>
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="chat">
+                        <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+                        <div class="chat-input">
+                            <input id="chatInput" type="text" placeholder="Type a message" />
+                            <button id="chatSend" type="button">Send</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -260,6 +300,8 @@
     <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script defer src="script.js"></script>
+    <script defer src="webrtc.js"></script>
 </body>
 </html>

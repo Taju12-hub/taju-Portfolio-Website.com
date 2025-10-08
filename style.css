@@ -553,6 +553,103 @@ footer span a:hover{
 
 
 /* responsive media query start */
+
+/* video section */
+.video {
+    background: #111;
+    color: #fff;
+}
+.video .title::before { background: #fff; }
+.video .title::after { content: "call & chat"; background: #111; }
+.video-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.video-grid video {
+    width: 100%;
+    height: 360px;
+    background: #000;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.video-sidebar {
+    background: #222;
+    border-radius: 8px;
+    padding: 16px;
+}
+.room-controls {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.room-controls input {
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #111;
+    color: #fff;
+    padding: 0 10px;
+}
+.room-controls button,
+.media-controls button,
+.chat-input button {
+    color: #fff;
+    background: crimson;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.room-controls button[disabled],
+.media-controls button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.room-controls button:hover,
+.media-controls button:hover,
+.chat-input button:hover {
+    filter: brightness(90%);
+}
+.media-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.chat { display: flex; flex-direction: column; gap: 8px; }
+.chat-messages {
+    height: 220px;
+    overflow-y: auto;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 8px;
+}
+.chat-message { margin: 6px 0; }
+.chat-message .from { font-weight: 600; color: #ddd; }
+.chat-input { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.chat-input input {
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #111;
+    color: #fff;
+    padding: 0 10px;
+}
+
+@media (max-width: 947px){
+    .video-layout { grid-template-columns: 1fr; }
+    .video-grid { grid-template-columns: 1fr; }
+    .video-grid video { height: 260px; }
+}
 @media (max-width: 1104px) {
     .about .about-content .left img{
         height: 350px;
