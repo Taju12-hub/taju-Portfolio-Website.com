@@ -1,0 +1,15 @@
+{
+  "name": "taju/portfolio-socketio",
+  "description": "Portfolio site with PHP Socket.IO signaling for WebRTC",
+  "type": "project",
+  "require": {
+    "workerman/phpsocket.io": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "license": "MIT"
+}
